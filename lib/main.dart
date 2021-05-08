@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:test_app/screens/hello_screen.dart';
+// import 'package:test_app/screens/slide_three.dart';
+// import 'package:test_app/screens/slide_two.dart';
 import 'package:test_app/widgets/logo.dart';
-import 'screens/main_screen.dart';
+import 'widgets/custom_widget.dart';
 
 void main() {
   runApp(MyApp());
@@ -14,15 +17,16 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        fontFamily: 'Amiri',
-
+       fontFamily: 'Amiri',
         primarySwatch: Colors.blue,
-
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: Logo(),
       routes: {
-        MainScreen.routeName:(ctx)=>MainScreen(),
+        HelloScreen.routeName:(ctx)=>HelloScreen(),
+        // SlideTwo.routeName:(ctx)=>SlideTwo(),
+        // SlideThree.routeName:(ctx)=>SlideThree(),
+
       },
     );
   }
